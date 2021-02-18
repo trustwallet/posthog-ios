@@ -138,7 +138,7 @@ static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
     dict[@"$device_model"] = GetDeviceModel();
 
     if ([self configuration].deviceId.length > 0) {
-        dict[@"$device_id"] = [self configuration].deviceId
+        dict[@"$device_id"] = [self configuration].deviceId;
     } else {
         dict[@"$device_id"] = [[device identifierForVendor] UUIDString];
     }
