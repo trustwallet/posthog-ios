@@ -56,6 +56,11 @@ typedef NSMutableURLRequest *_Nonnull (^PHGRequestFactory)(NSURL *_Nonnull);
 @property (nonatomic, copy, nonnull) NSString *libraryName;
 
 /**
+ * Override the $device_id property,
+ */
+@property (nonatomic, copy, nonnull) NSString *deviceId;
+
+/**
  * Override the $lib_version property, used by the React Native client
  */
 @property (nonatomic, copy, nonnull) NSString *libraryVersion;

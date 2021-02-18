@@ -136,7 +136,13 @@ static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
     dict[@"$device_manufacturer"] = @"Apple";
     dict[@"$device_type"] = @"ios";
     dict[@"$device_model"] = GetDeviceModel();
-    dict[@"$device_id"] = [[device identifierForVendor] UUIDString];
+
+    if ([self configuration].deviceId.length > 0) {
+        dict[@"$device_id"] = [self configuration].deviceId
+    } else {
+        dict[@"$device_id"] = [[device identifierForVendor] UUIDString];
+    }
+
     dict[@"$device_name"] = [device model];
 
     dict[@"$os_name"] = device.systemName;
