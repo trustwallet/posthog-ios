@@ -210,6 +210,7 @@ static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
 
     context[@"$timezone"] = [[NSTimeZone localTimeZone] name];
 
+    /*
     if (self.reachability.isReachable) {
         context[@"$network_wifi"] = @(self.reachability.isReachableViaWiFi);
         context[@"$network_cellular"] = @(self.reachability.isReachableViaWWAN);
@@ -232,6 +233,7 @@ static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
     if (self.referrer) {
         context[@"$referrer"] = [self.referrer copy];
     }
+    */
 
     return [context copy];
 }
